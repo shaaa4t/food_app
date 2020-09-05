@@ -1,7 +1,8 @@
 # food_app
 
 Flutter UI.
-
 ![](/foodapp.png)
 
-![](/foodappvedio.mp4)
+Demo
+![](/foodappvedio.gif)
+
