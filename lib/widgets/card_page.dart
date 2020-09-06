@@ -116,37 +116,52 @@ class _CardPageState extends State<CardPage> with TickerProviderStateMixin {
                             );
                           }),
                     ),
+                   
                     Positioned(
                       top: 20,
                       right: 50,
-                      child: Transform.translate(
-                        offset: Offset(200 * (1 - _imageAnim.value), 0),
-                        child: Image.asset(
-                          'assets/images/tommato.png',
-                          width: _width * 0.1,
-                        ),
-                      ),
+                      child: AnimatedBuilder(
+                          animation: _imageAnime,
+                          builder: (context, snapshot) {
+                            return Transform.translate(
+                              offset: Offset(200 * (1 - _imageAnim.value), 0),
+                              child: Image.asset(
+                                'assets/images/tommato.png',
+                                width: _width * 0.1,
+                              ),
+                            );
+                          }),
                     ),
+                    
                     Positioned(
                       bottom: 10,
                       left: -50,
-                      child: Transform.translate(
-                        offset: Offset(-500 * (1 - _imageAnim.value), 0),
-                        child: Image.asset(
-                          'assets/images/geenleaf.png',
-                          width: _width / 1.5,
-                        ),
-                      ),
+                      child: AnimatedBuilder(
+                          animation: _imageAnime,
+                          builder: (context, snapshot) {
+                            return Transform.translate(
+                              offset: Offset(-500*(1-_imageAnim.value),0),
+                              child: Image.asset(
+                                'assets/images/geenleaf.png',
+                                width: _width / 1.5,
+                              ),
+                            );
+                          }),
                     ),
                     Positioned(
                       bottom: 20,
                       left: 50,
-                      child: Transform.translate(
-                        offset: Offset(-500 * (1 - _imageAnim.value), 0),
-                        child: Image.asset(
-                          'assets/images/tommato.png',
-                          width: _width * 0.1,
-                        ),
+                      child: AnimatedBuilder(
+                          animation: _imageAnime,
+                        builder: (context, snapshot) {
+                          return Transform.translate(
+                            offset: Offset(-500 * (1 - _imageAnim.value), 0),
+                            child: Image.asset(
+                              'assets/images/tommato.png',
+                              width: _width * 0.1,
+                            ),
+                          );
+                        }
                       ),
                     ),
                   ],
